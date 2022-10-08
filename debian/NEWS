@@ -1,0 +1,16 @@
+hddtemp (0.3-beta15-54) unstable; urgency=medium
+
+  hddtemp has been dead upstream for many years and is therefore in a minimal
+  maintenance mode. It will be shipped in the Debian Bullseye release, but
+  will not be present in the Debian Bookworm release.
+
+  Nowadays the 'drivetemp' kernel module is a better alternative. It uses the
+  Linux Hardware Monitoring kernel API (hwmon), so the temperature is returned
+  the same way and using the same tools as other sensors.
+
+  Loading this module is as easy as creating a file in the /etc/modules-load.d
+  directory:
+
+    echo drivetemp > /etc/modules-load.d/drivetemp.conf
+
+ -- Aurelien Jarno <aurel32@debian.org>  Tue, 02 Feb 2021 20:27:44 +0100
